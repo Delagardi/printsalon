@@ -551,6 +551,74 @@ ul.dropdown li {
   background: url("../img/bgSliderMain.png");
 }
 
+/* Breadcrumbs START */
+
+.breadcrumbs{
+  overflow: hidden;
+  width: 100%;
+}
+
+.breadcrumbs li{
+  float: left;
+  margin: 0 7px 0 14px;
+}
+
+.breadcrumbs a {
+  @extend %fontText;
+  background: #8b8b8c;
+  padding: 5px 10px;
+  float: left;
+  text-decoration: none;
+  position: relative;
+}
+
+.breadcrumbs a:hover{
+  background: #a22020;
+}
+
+.breadcrumbs a::before,
+.breadcrumbs a::after{
+  content: "";
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  width: 14px;
+  background: #8b8b8c;
+  transform: skew(-15deg);  
+}
+
+.breadcrumbs a::before{
+  left: -7px;
+}
+
+.breadcrumbs a:hover::before{
+  background: #a22020;
+}
+
+.breadcrumbs a::after{
+  right: -7px;   
+}
+
+.breadcrumbs a:hover::after{
+  background: #a22020;
+}
+
+.breadcrumbs .breadcrumbs-active,
+.breadcrumbs .breadcrumbs-active:before,
+.breadcrumbs .breadcrumbs-active:after,
+.breadcrumbs .breadcrumbs-active:hover{
+  font-weight: bold;
+  background: #a22020;
+}
+
+.breadcrumbs .breadcrumbs-first:before,
+.breadcrumbs .breadcrumbs-first:hover:before {
+  background: none;
+}
+
+/* Breadcrumbs END */
+
+
 /* Sidebar RIGHT */
 
 .main-rightbar {
@@ -569,8 +637,6 @@ ul.dropdown li {
   margin: 15px 30px 15px;
 }
 
-
-//--------------------
 .main-rightbar__list {
   @extend %fontRightSidebar;
   margin: 0 0 20px 0;
