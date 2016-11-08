@@ -508,6 +508,9 @@ ul.dropdown li {
   width: 200px;
   height: 225px;
   margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #ccc,
+              -1px -1px 5px #ccc;
 
   div {
     background: $black;
@@ -635,6 +638,7 @@ ul.dropdown li {
   width: 107px;
   height: 107px;
   margin: 15px 30px 15px;
+  box-shadow: none;
 }
 
 .main-rightbar__list {
@@ -874,3 +878,128 @@ ul.dropdown li {
   float: left;
   margin: 15px;
 }
+
+
+/* ITEM PAGE */
+.main-item {
+  margin: 15px;
+  min-height: 800px;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+.main-item__text {
+  width: 268px;
+  float: left;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  h1 {
+    @extend %fontTile;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: $black;
+    text-align: center;
+    padding: 20px 5px;
+    border-bottom: 4px solid $red; 
+    margin: 0;
+  }
+
+  .main-item__textarea {
+    min-height: 280px;
+    background: url("../img/bgContentPattern.png");
+  }
+  
+  p {
+    @extend %fontRightSidebar;
+    padding: 10px;
+    margin: 0;
+  }
+}
+
+.main-item__img {
+  float: left;
+  margin-left: 25px;
+}
+
+.main-item__img img {
+  border-radius: 10px;
+}
+
+.main-item__table {
+  margin: 30px 0;
+}
+
+table {
+  background: url("../img/bgContentPattern.png");
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px #ccc,
+              -1px -1px 5px #ccc;
+  th {
+    @extend %fontTile;
+    background: $black;
+    padding: 20px 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  tr {
+    border-bottom: solid 2px #8f8f8f;
+  }
+  tr:nth-child(2) td {
+    @extend %fontTile;
+    background: #8f8f8f;
+    border-right: solid 2px #39393c;
+  }
+  tr:nth-child(2) td:last-child {
+    border-right: none;
+  }
+  td {
+    @extend %fontTableContent;
+    text-align: center;
+    padding: 15px 5px;
+    border-bottom: solid 2px #8f8f8f;
+  }
+  tr:last-child td {
+    border-bottom: none;
+  }
+  .tg {
+    border-collapse:collapse;
+    border-spacing:0;
+  }
+  .tg td{
+    padding:10px 5px;
+    border-style:solid;
+    border-width:0px;
+    overflow:hidden;
+    word-break:normal;
+  }
+  .tg th{
+    font-weight:normal;
+    padding:10px 5px;
+    border-style:solid;
+    border-width:0px;
+    overflow:hidden;
+    word-break:normal;
+  }
+  .tg .tg-yw4l {
+    vertical-align:top
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
